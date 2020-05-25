@@ -33,7 +33,7 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "rtimulib_node");
     ROS_INFO("Imu driver is running");
     ros::NodeHandle n;
-    ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu>("imu/data", 1);
+    ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu>("imu", 1);
 
     std::string path_calib_file;
     n.getParam("/rtimulib_node/calibration_file_path", path_calib_file);
